@@ -11,6 +11,7 @@ import logging
 import datetime
 #logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',level=logging.INFO ,filename='RainFall_Bot-'+time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())+'.log')
 
+APIKey=''
 
 root_logger= logging.getLogger()
 root_logger.setLevel(logging.INFO) # or whatever
@@ -37,7 +38,7 @@ else:
 globalrain = rain.RainFall()
 
 
-updater = Updater('1019498231:AAH8JI1YqYmXmrj8QFKjsBI5WEd-6yJ1zW8', use_context=True)
+updater = Updater(APIKey, use_context=True)
 dispatcher = updater.dispatcher
 
 def start(update, context):
